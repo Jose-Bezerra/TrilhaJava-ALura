@@ -1,3 +1,6 @@
+# Arquivos Ocultos
+.*
+
 # Compiled class file
 *.class
 
