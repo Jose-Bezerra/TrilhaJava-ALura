@@ -1,7 +1,5 @@
 package com.loiane.estruturadados.vetor;
 
-import java.util.Arrays;
-
 public class Vetor {
 
     private String[] elementos;
@@ -33,6 +31,19 @@ public class Vetor {
         }
     }
 
+    public boolean adiciona (int posicao, String elemento){
+      if (posicaoValida(posicao)) { // se true, movemos os elemento abaixo.
+        for (int i = this.tamanho - 1; i >= posicao; i--){
+          this.elementos[i + 1] = elementos[i];
+        }
+        this.elementos[posicao] = elemento;
+        this.tamanho++;
+      }
+
+
+      return false;
+    }
+
 
     public int tamanho() {
        return  this.tamanho;
@@ -45,6 +56,29 @@ public class Vetor {
 //        ", tamanho=" + tamanho +
 //        '}';
 //  }
+
+    public String busca(int posicao) {
+      posicaoValida(posicao);
+      return this.elementos[posicao]; // Temos que fazer um tratamento
+    }
+
+  private boolean posicaoValida(int posicao) {
+    if (!(posicao >= 0 && posicao < tamanho) ) {
+      throw new IllegalArgumentException("Posição inválida!");
+    }
+
+    return true;
+  }
+
+  //Busca sequencial para saber se o elemento existe na coleção
+    public int busca(String elemento) {
+      for (int i = 0; i < tamanho; i++) {
+        if (this.elementos[i].equals(elemento)) {
+          return i;
+        }
+      }
+      return -1;
+    }
 
     public String toString(){
       StringBuilder s = new StringBuilder();
