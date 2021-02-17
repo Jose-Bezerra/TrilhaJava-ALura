@@ -16,8 +16,7 @@ public class Aula05 {
 
     System.out.println(vetor.tamanho());
     System.out.println(vetor);
-    System.out.println(vetor.busca(3
-    ));
+    System.out.println(vetor.busca(3));
   }
 
 }

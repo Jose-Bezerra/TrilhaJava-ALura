@@ -11,17 +11,19 @@ public class Vetor {
     }
 
 
-//    public void adiciona(String elemento) {
-//        for (int  i = 0; i < this.elementos.length; i++) {
-//            if (this.elementos[i] == null) {
-//                this.elementos[i] = elemento;
-//                break; //evita que o laço seja feito até o fim
-//            }
-//        }
-//    }
+    private void aumentaCapacidade(){
+      if (this.tamanho == this.elementos.length) {
+        String[] novosElementos = new String[this.elementos.length * 2];
+        for (int i = 0; i < this.elementos.length; i++) {
+          novosElementos[i] = elementos[i];
+        }
+        this.elementos =  novosElementos;
+      }
+    }
 
 
     public boolean adiciona(String elemento) {
+      this.aumentaCapacidade();
         if (tamanho < elementos.length) {
            elementos[tamanho] = elemento;
             tamanho++;
@@ -30,36 +32,59 @@ public class Vetor {
             return false;
         }
     }
-
-    public boolean adiciona (int posicao, String elemento){
-      if (posicaoValida(posicao)) { // se true, movemos os elemento abaixo.
+  /**
+   * 0 1 2 3 4 => indíces
+   * B C E F G => 5 elementos
+   * Quero acrescentar um elemento na posição X
+   * Teremos que abrir um espaço e empurrar para direita os elementos
+   * if posicao x = 1;
+   * vetor[2] = vetor[1];
+   * vetor[3] = vetor[2]
+   * vetor[4] = vetor[3]
+   * vetor[5] = vetor[4], antes dessa atribuiçao, vetor[5] = null;
+   */
+  /
+  public boolean adiciona (int posicao, String elemento){
+      this.aumentaCapacidade();
+      if (posicaoValida(posicao)) { // se true, movemos os elementos abaixo.
         for (int i = this.tamanho - 1; i >= posicao; i--){
-          this.elementos[i + 1] = elementos[i];
+          this.elementos[i + 1] = this.elementos[i];
         }
         this.elementos[posicao] = elemento;
         this.tamanho++;
       }
 
-
       return false;
     }
 
+    // 0 1 2 3 4 => índices
+    // B C E F G =>  tamanho 5
+    // Quero remover o elemento na posiçao 1
+    // vetro[1] = vetor[2]
+    // vetro[2] = vetor[3]
+    // vetro[3] = vetor[4] o valor na posição 4 é G.
+    // Perceba que o G ficou na posição 3 e 4. então temos que diminuir o tamanho do vetor.
+    // tamanho--
+    public void remove(int posicao) {
+      if (posicaoValida(posicao)) {
+        for (int i = posicao; i < tamanho; i++) {
+          elementos[i] = elementos[i +1];
+        }
+        tamanho--;
+      }
+    }
 
     public int tamanho() {
        return  this.tamanho;
     }
 
-//  @Override
-//  public String toString() {
-//    return "Vetor{" +
-//        "elementos=" + Arrays.toString(elementos) +
-//        ", tamanho=" + tamanho +
-//        '}';
-//  }
 
     public String busca(int posicao) {
-      posicaoValida(posicao);
-      return this.elementos[posicao]; // Temos que fazer um tratamento
+      if (posicaoValida(posicao)) {
+        return elementos[posicao];
+      }
+
+      return "Posição inválida" ; // Temos que fazer um tratamento
     }
 
   private boolean posicaoValida(int posicao) {
@@ -96,4 +121,5 @@ public class Vetor {
       return s.toString();
 
     }
+
 }
