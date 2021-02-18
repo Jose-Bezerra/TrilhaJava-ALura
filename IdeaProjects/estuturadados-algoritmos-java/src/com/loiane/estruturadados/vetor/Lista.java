@@ -1,19 +1,27 @@
 package com.loiane.estruturadados.vetor;
 
-public class Vetor {
+import java.lang.reflect.Array;
 
-    private String[] elementos;
+public class Lista<T> { //Estamos usando o recurso Generics - /java 5, obrigando que seja declarado o tipo na criação
+    //da lista.
+
+    private T[] elementos; //Este T é simbologia de Tipo
     private int tamanho;
 
-    public Vetor(int capacidade) {
-        this.elementos = new String[capacidade];
+    public Lista(int capacidade) {
+        this.elementos = (T[]) new Object[capacidade];
+        tamanho = 0;
+    }
+
+    public Lista(int capacidade, Class<T> tipoClasse) { //segundo maneira de escrever o Generics
+        this.elementos = (T[]) Array.newInstance(tipoClasse, capacidade);
         tamanho = 0;
     }
 
 
     private void aumentaCapacidade(){
       if (this.tamanho == this.elementos.length) {
-        String[] novosElementos = new String[this.elementos.length * 2];
+        T[] novosElementos = (T[]) new Object[this.elementos.length * 2];
         for (int i = 0; i < this.elementos.length; i++) {
           novosElementos[i] = elementos[i];
         }
@@ -22,7 +30,7 @@ public class Vetor {
     }
 
 
-    public boolean adiciona(String elemento) {
+    public boolean adiciona(T elemento) {
       this.aumentaCapacidade();
         if (tamanho < elementos.length) {
            elementos[tamanho] = elemento;
@@ -44,7 +52,7 @@ public class Vetor {
    * vetor[5] = vetor[4], antes dessa atribuiçao, vetor[5] = null;
    */
 
-  public boolean adiciona (int posicao, String elemento){
+  public boolean adiciona (int posicao, T elemento){
       this.aumentaCapacidade();
       if (posicaoValida(posicao)) { // se true, movemos os elementos abaixo.
         for (int i = this.tamanho - 1; i >= posicao; i--){
@@ -79,7 +87,7 @@ public class Vetor {
     }
 
 
-    public String busca(int posicao) {
+    public Object busca(int posicao) {
       if (posicaoValida(posicao)) {
         return elementos[posicao];
       }
@@ -96,7 +104,7 @@ public class Vetor {
   }
 
   //Busca sequencial para saber se o elemento existe na coleção
-    public int busca(String elemento) {
+    public int busca(T elemento) {
       for (int i = 0; i < tamanho; i++) {
         if (this.elementos[i].equals(elemento)) {
           return i;

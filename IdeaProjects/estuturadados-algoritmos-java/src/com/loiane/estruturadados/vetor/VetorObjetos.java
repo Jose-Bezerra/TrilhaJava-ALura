@@ -1,19 +1,19 @@
 package com.loiane.estruturadados.vetor;
 
-public class Vetor {
+public class VetorObjetos {
 
-    private String[] elementos;
+    private Object[] elementos;
     private int tamanho;
 
-    public Vetor(int capacidade) {
-        this.elementos = new String[capacidade];
+    public VetorObjetos(int capacidade) {
+        this.elementos = new Object[capacidade];
         tamanho = 0;
     }
 
 
     private void aumentaCapacidade(){
       if (this.tamanho == this.elementos.length) {
-        String[] novosElementos = new String[this.elementos.length * 2];
+        Object[] novosElementos = new Object[this.elementos.length * 2];
         for (int i = 0; i < this.elementos.length; i++) {
           novosElementos[i] = elementos[i];
         }
@@ -22,7 +22,7 @@ public class Vetor {
     }
 
 
-    public boolean adiciona(String elemento) {
+    public boolean adiciona(Object elemento) {
       this.aumentaCapacidade();
         if (tamanho < elementos.length) {
            elementos[tamanho] = elemento;
@@ -44,7 +44,7 @@ public class Vetor {
    * vetor[5] = vetor[4], antes dessa atribuiçao, vetor[5] = null;
    */
 
-  public boolean adiciona (int posicao, String elemento){
+  public boolean adiciona (int posicao, Object elemento){
       this.aumentaCapacidade();
       if (posicaoValida(posicao)) { // se true, movemos os elementos abaixo.
         for (int i = this.tamanho - 1; i >= posicao; i--){
@@ -79,7 +79,7 @@ public class Vetor {
     }
 
 
-    public String busca(int posicao) {
+    public Object busca(int posicao) {
       if (posicaoValida(posicao)) {
         return elementos[posicao];
       }
@@ -96,7 +96,7 @@ public class Vetor {
   }
 
   //Busca sequencial para saber se o elemento existe na coleção
-    public int busca(String elemento) {
+    public int busca(Object elemento) {
       for (int i = 0; i < tamanho; i++) {
         if (this.elementos[i].equals(elemento)) {
           return i;
