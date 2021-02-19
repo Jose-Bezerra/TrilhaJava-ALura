@@ -75,11 +75,18 @@ public class Lista<T> { //Estamos usando o recurso Generics - /java 5, obrigando
     // tamanho--
     public void remove(int posicao) {
       if (posicaoValida(posicao)) {
-        for (int i = posicao; i < tamanho; i++) {
+        for (int i = posicao; i < tamanho - 1; i++) {
           elementos[i] = elementos[i +1];
         }
         tamanho--;
       }
+    }
+
+    public void remove(T elemento) {
+        int posicao = this.busca(elemento);
+        if (posicao > -1) {
+            this.remove(posicao);
+        }
     }
 
     public int tamanho() {
@@ -111,6 +118,45 @@ public class Lista<T> { //Estamos usando o recurso Generics - /java 5, obrigando
         }
       }
       return -1;
+    }
+
+    public int ultimoIndice(T elemento){ //Para elementos repetidos, pegamos o último índice da posição
+      /*
+      int ultimaPosicao = -1;
+      Observe que o método é custoso, pois varre o array inteiro, logo vamos inverter e varrer o array do fim
+      para o início.
+      for (int i = 0; i < tamanho; i++) {
+          if (this.elementos[i].equals(elemento)) {
+            ultimaPosicao = i;
+          }
+      }
+      * */
+        for (int i = tamanho - 1; i >= 0; i--) {
+            if (this.elementos[i].equals(elemento)) {
+              return i;
+            }
+        }
+      return -1;
+    }
+
+    public void limpar() {
+      this.elementos = (T[]) new Object [this.elementos.length];
+
+      for (int i = 0; i < tamanho; i++ ) {
+          this.elementos = null;
+      }
+      tamanho = 0;
+    }
+
+    public boolean contem(T elemento) { //Poderíamos utilizar as instruções abaixo, porém a manutenção do
+      // código ficaria mais custoso
+//        for (int i = 0; i < tamanho; i++) {
+//            if (this.elementos[i].equals(elemento)) {
+//                return true;
+//            }
+//        }
+//        return false;
+        return busca(elemento) > -1;
     }
 
     public String toString(){
