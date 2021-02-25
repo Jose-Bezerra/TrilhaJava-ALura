@@ -43,7 +43,7 @@ public class Exer06Loiane {
                         return false;
                     }
                 }
-            }
+            } else
 
             index++;
         }
