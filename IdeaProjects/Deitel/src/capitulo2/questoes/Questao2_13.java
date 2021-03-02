@@ -1,4 +1,4 @@
-package questoes.capitulo1;
+package capitulo2.questoes;
 
 // Cálculo de expressões com base na ordem de precedência.
 public class Questao2_13 {

@@ -1,4 +1,4 @@
-package questoes.capitulo1;
+package capitulo2.questoes;
 
 // Exibindo formas geómetricas
 public class Questao2_22 {

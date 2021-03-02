@@ -1,4 +1,4 @@
-package questoes.capitulo1;
+package capitulo2.questoes;
 
 //Exibindo informações na tela de diferentes maneiras.
 public class Questao2_14 {

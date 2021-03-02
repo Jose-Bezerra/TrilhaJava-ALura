@@ -1,4 +1,4 @@
-package questoes.capitulo1;
+package capitulo2.questoes;
 
 import java.util.Scanner;
 // Cálculo aritméticos
