@@ -27,4 +27,21 @@ public class ContaCorrente extends Conta implements Tributavel {
 		return super.getSaldo() * 0.01;
 	}
 
+//	public boolean ehIgual(Conta outra) {
+//		if (super.getAgencia() != outra.getAgencia()){
+//			return false;
+//		}
+//
+//		if (super.getNumero() != outra.getNumero()) {
+//			return false;
+//		}
+//
+//		return true;
+//	}
+
+//	@Override
+//	public String toString() {
+//		return "ContaCorrente, Número: " + super.getNumero()
+//				+ ", " + "Agência: " + super.getAgencia();
+//	}
 }
