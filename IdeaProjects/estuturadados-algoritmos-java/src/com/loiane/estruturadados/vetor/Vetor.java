@@ -5,7 +5,7 @@ public class Vetor {
     private String[] elementos;
     private int tamanho;
 
-    public Vetor(int capacidade) {
+    public Vetor(int capacidade) { // Não confundir capacidade
         this.elementos = new String[capacidade];
         tamanho = 0;
     }

@@ -1,4 +1,6 @@
-package capitulo3.bank;
+package capitulo3.testes;
+
+import capitulo3.modelos.Account;
 
 import java.util.Scanner;
 
@@ -26,6 +28,11 @@ public class AccountTest {
 
         displayAccount(account1);
         displayAccount(account2);
+
+        System.out.println("Enter withdraw amount for account1: ");
+        double withdrawAmount = scanner.nextDouble();
+        account1.withdraw(withdrawAmount);
+        System.out.println("Current balance: " + account1.getBalance());
     }
 
     private static void displayAccount(Account account) {

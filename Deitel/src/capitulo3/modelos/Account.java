@@ -1,4 +1,4 @@
-package capitulo3.bank;
+package capitulo3.modelos;
 
 public class Account {
 
@@ -8,7 +8,7 @@ public class Account {
     public Account(String name, double balance) {
         this.name = name;
         if (balance > 0.0) { // Validação, se o balance for menor que 0.0
-            //a variável de instância balance manterá seu valro inicial padrão 0.0
+            //a variável de instância balance manterá seu valor inicial padrão 0.0
             this.balance = balance;
         }
     }
@@ -28,6 +28,16 @@ public class Account {
     public void deposit(double depositAmount) {
         if (depositAmount > 0.0) {
             balance += depositAmount;
+        }
+    }
+
+    public void withdraw (double withdrawAmount) {
+        if ( withdrawAmount < this.balance) {
+           this.balance -= withdrawAmount;
+
+        } else {
+            System.out.println( "Withdraw amount exceeded account balance");;
+
         }
     }
 }
