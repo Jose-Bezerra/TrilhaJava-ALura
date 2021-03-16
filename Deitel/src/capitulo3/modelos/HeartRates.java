@@ -1,7 +1,9 @@
 package capitulo3.modelos;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class HeartRates {
     private String nome;
@@ -51,8 +53,8 @@ public class HeartRates {
     }
 
     public int idade() {
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = new Date();
+        Calendar data = Calendar.getInstance();
+
         return 0;
     }
 }
