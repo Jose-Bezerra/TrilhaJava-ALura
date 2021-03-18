@@ -1,97 +1,93 @@
-#### INTELLIJ IDEA - SHORTCUTS
 
+# Intellij
 
-#### General
+```markdown
 
-| Mac Os      | Windows - Linux |               Descrição                  
-| ----------- | -----------     | ---------------------------------------- 
-| Cmd + 1     | Alt + 1         |           Hide View Project            
-| Cmd + ↑     |   -       |            Jump To Navigator Bar        
-| Cmd + Shift + F12 | Alt + Shift + F12 | Hide All Tool Windows - Expande Tela
-| Cmd + W | Ctrl + F4 | Close Tab
-| Opt + W | - | Close Other Tabs - Inserido Manualmente
-| Opt + Shift + X | Alt + Shift + x | Clear Context - Fecha Tabs (Todas)
-| Ctrl + Opt + R, Ctrl R | Alt + Shift + F10, Shift F10 | RUN
+### MacOS / Windows / Linux
 
+Obs: Os atalhos para Windows e Linux tendem a ser os mesmos nas suas configura-
+ções padrões. Então defini: Lado esquerdo do "|" será MacOs e direito, por sua 
+vez, Windows e Linux. Temos, ainda a ação do comando descrita conforme descrito  no KEYMAP IntelliJ. Nas combinações de teclas abaixo, omiti o sinal de "+" para
+a leitura ficar agradável. 
 
+### General
 
-#### Search / Navigation
+. Cmd  1        |  Alt  1             <View_Hide PROJECT>
+. Ctrl Opt  R   |  Alt  Shift  F10    <RUN - Edit Config MAIN FILE>
+. Ctrl R        |  Shift F10          <RUN with COVERAGE>
+. F1            |                     <Quick Documentation>
+. Cmd P         |                     <Info PARAMETERS>
+. Opt Enter     |  Alt  Enter         <Show Context ACTIONS>
+. Cmd ↑         |                     <Jump to NAVIGATOR bar>
+. Cmd Shift F12 |                     <Hide all tool WINDOWS - Expande a tela>
+. Cmd W         |  Ctrl F4            <Close TAB>
+. Opt W         |                     <Close OTHER TABS - Manual>
+. Opt Shift X   |  Alt Shift X        <Clear CONTEXT - ex: fecha as tabs>
 
- Mac Os      | Windows - Linux |               Descrição                  
- ------------- | -----------     | ---------------------------------------- 
- Double Shift | Double Shift      |          Search Everywhere          
- Cmd + O     |   Ctrl + N       |           Go to Class        
- Cmd + Shift + O |  Ctrl + Shift + O  | Go to File
- Cmd + Opt + O | Ctrl + Shift + Alt + N | Go To Symbol
-Cmd + Shift + A |  Ctrl + Shif + A | Find Action
-Cmd + Shift + F | Ctrl + Shift + F | Find Files
-Cmd + E  | Ctrl + E | Recent Files
-Opt + Space Bar | - | Go To Declaration Without Open File
-Cmd + B, Cmd Click | Ctrl + B | Go To Declaration or Usages
-Cmd + Shift + [ ou ] | Alt + Right ou Left | Go to Next, Previous Editor Tab
-Ctrl + H | Ctrl + H | Type Hierarchy
-Cmd + F12 | Ctrl + F12 | File Structure - View Methods and Fields
-Cmd + ; | Ctrl + Shift + Alt + S | Project Structure
+ 
+### Search / Navigation
 
-#### Editing
+. Double Shift  |  Double Shift       <Search EVERYWHERE>
+. Cmd O         |  Ctrl N             <Go to CLASS>
+. Cmd Shift O   |  Ctrl + Shift + O   <Go to FILE>
+. Cmd Opt O     |  Ctrl Shift Alt N   <Go to SYMBOL>
+. Cmd Shift A   |  Ctrl Shift A       <Find ACTION >
+. Cmd Shift F   |  Ctrl Shift F       <Find in FILES>
+. Cmd E         |  Ctrl E             <Recent FILES>
+. Opt SpaceBar  |                     <Go to DECLARATON without open file>
+. Cmd B         |  Ctrl B             <Go to declaration or Usages>
+. Cmd Shift [   |  Alt ArrowRight     <Go to NEXT, previus editor AB>
+. Ctrl H        |                     <Type HIERARCHY>
+. Cmd F12       |  Ctrl F12           <File STRUCTURE>
+. Cmd ;         |  Ctrl Shift Alt S   <Project STRUCTURE>
 
+### Editing
 
- Mac Os      | Windows - Linux |               Descrição                  
- ----------- | -----------     | ---------------------------------------- 
-Cmd + N | Alt + Insert | Generate Code. ex: Criar Classe
-Opt + Enter |Alt + Enter |Show Context Actions 
-Cmd + Shift + ↑↓ | Alt + Shift ↑↓ | Move Statement UP, Down. Dentro Do Escopo
-Opt + Shift + ↑↓ | Ctrl + Shift + ↑↓ | Move Line Up, Down. Fora do escopo |
-Cmd + D | Ctrl D | Duplicate Line Or Selection
-Option + Z | - | Soft Wrap, Atalho Criado Manualmente
-Cmd + Shift + 8 | Alt + Shift + Insert | Column Selection Mode 
-Cmd + Backspace | Ctrl + Y | Delete Line
-Cmd + / | Ctrl + / | Comment With Line Comment
-Opt + F7 | Alt + F7 | Find Usages
-Ctrl + Opt + O | Ctrl + Alt + O | Optimize Imports
+. Cmd N         |  Alt Insert         <Generate code - ex. Criar classe>
+. Cmd Shift ↑↓  |  Alt Shift ↑↓       <Move STATEMENT UP, DOWN>
+. Opt Shift ↑↓  |  Ctrl Shift ↑↓      <Move LINE UP, DOWN>
+. Cmd D         |  Ctrl D             <Duplicate LINE or selection>
+. Option Z      |                     <Soft WRAP, atalho criado manualmente>
+. Cmd Backspace |  Ctrl Y             <Delete Line>
+. Cmd  /        |  Ctrl /             <Comment with LINE comment>
+. Opt F7        |  Alt F7             <Find USAGES>
+. Ctrl Opt O    |  Ctrl Alt  O        <Optimize IMPORTS>
+. F2            |                     <Next Highlighted ERROR>
+. Shift F2      |                     <Previous Highlighted ERROR>
+. Cmd  I        |                     <Active EDITOR - inserido manualmente>
 
-#### Editing Selection
+### Editing - Selection
 
+. Ctrl G        |  Alt G             <Add SELECTION For NEXT Occurrence>
+. Ctrl Shift G  |  Alt Shift J       <UNSELECT Occurrence>
+. Shit ↑↓       |                    <Up, Down with SELECTION>
+. Opt ↑         |  Ctrl W            <EXTEND SELECTION>
+. Cmd Shift  8  |  Alt Shift Insert  <Column SELECTION MODE>
 
- Mac Os      | Windows - Linux |               Descrição                  
- ----------- | -----------     | ---------------------------------------- 
- Ctrl + G | Alt + G | Add Selection For Next Occurrence
- Ctrl + Shift + G | Alt + Shift + J | Unselect Occurrence
- Shit + ↑↓ | - | Up, Down With Selection
- Opt + ↑ | Ctrl + W | Extend Selection
+### Refactor
 
-#### Refactor
+. F5            |                    <Copy>
+. F6            |                    <Move to>
+. Cmd Opt  L    |  Ctrl Alt  L       <Reformat CODE>
+. Shift F6      |                    <Rename>
+. Cmd Shift  F6 |  Ctrl Shift F6     <Type MIGRATION>
+. Cmd Opt M     |  Ctrl Alt M        <Extract METHOD>
+. Ctrl T        |  Ctrl Shift Alt T  <Refactor THIS>
 
- Mac Os      | Windows - Linux |               Descrição                  
- ----------- | -----------     | ---------------------------------------- 
-F5 | F5 | Copy
-F6 | F6 | Move To
-Cmd + Opt + L | Ctrl + Alt + L | Reformat Code
-Shift + F6 | Shift + F6 | Rename
-Cmd + Shift + F6 | Ctrl + Shift + F6 | Type Migration
-Cmd + Opt + M | Ctrl + Alt + M | Extract Method
-Ctrl + T | Ctrl + Shift + Alt + T | Refactor This - Delegate Não Aparece Na Pesquisa
-Double Shift | Ctrl + Shift + A | Pesquise Por Extract Delegate
+### Templates
 
-#### Templates
+. Cmd Opt V     |  Ctrl Alt V      <Introduce VARIABLE>
+. Cmd Opt F     |  Ctrl Alt F      <Introduce FIELD>
+. Cmd Opt C     |  Ctrl Alt C      <Introduce CONSTANT>
+. Cmd Opt T     |  Ctrl Alt T      <Surround With>
+. Cmd P, F1     |  Ctrl J          <Live Templates - VIEW PARAMETERS> 
 
-  Mac Os       | Windows - Linux |               Descrição                  
- -----------  | -----------     | ---------------------------------------- 
-Cmd + Opt + V | Ctrl + Alt + V | Introduce Variable
-Cmd + Opt + F| Ctrl + Alt + F | Intdroduce Field - Atributo
-Cmd + Opt + C | Ctrl + Alt + C | Introduce Constant 
-Cmd + Opt + T | Ctrl + Alt + T | Surround With
-Cmd + J | Ctrl + J| Live Templates - Visualiza Parâmetros Métodos> 
-F1, Ctrl + J  | Ctrl Q, Ctrl + P |Quick Documentation - Show Method Assignature; Parameter Info
+### Debug
 
-#### Debug
-
-Mac Os       | Windows - Linux |               Descrição                  
- -----------  | -----------     | ---------------------------------------- 
-Ctrl + Shift + D, Ctrl + D | Alt + Shift + F9, Shift + F9 | Run Debug
-F7 | F7 | Step Into
-F8 | F8 | Step Over
-Shift + F8 | Shift + F8 | Step Out
-Opt + F9 | Alt + F9 | Run To Cursor
-Opt + F8 | Alt + F8 | Evaluete Expression
-
+. Ctrl Shift D  |  Alt Shift F9  <Run Debug>
+. F7            |                <Step Into>
+. F8            |                <Step Over>
+. Shift F8      |                <Step Out>
+. Opt F9        |  Alt F9        <Run to Cursor>
+. Opt F8        |  Alt F8        <Evaluete Expression>
+```
