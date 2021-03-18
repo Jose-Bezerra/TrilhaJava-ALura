@@ -7,8 +7,7 @@
 
 Obs: Os atalhos para Windows e Linux tendem a ser os mesmos nas suas configura-
 ções padrões. Então defini: Lado esquerdo do "|" será MacOs e direito, por sua 
-vez, Windows e Linux. Temos, ainda a ação do comando descrita conforme descrito  
-no KEYMAP IntelliJ.Nas combinações de teclas abaixo, omiti o sinal de "+" para
+vez, Windows e Linux. Temos, ainda a ação do comando descrita conforme descrito  no KEYMAP IntelliJ. Nas combinações de teclas abaixo, omiti o sinal de "+" para
 a leitura ficar agradável. 
 
 ### General
@@ -25,12 +24,11 @@ a leitura ficar agradável.
 . Opt W         |                     <Close OTHER TABS - Manual>
 . Opt Shift X   |  Alt Shift X        <Clear CONTEXT - ex: fecha as tabs>
 
- 
 ### Search / Navigation
 
 . Double Shift  |  Double Shift       <Search EVERYWHERE>
 . Cmd O         |  Ctrl N             <Go to CLASS>
-. Cmd Shift O   |  Ctrl + Shift + O   <Go to FILE>
+. Cmd Shift O   |  Ctrl Shift O       <Go to FILE>
 . Cmd Opt O     |  Ctrl Shift Alt N   <Go to SYMBOL>
 . Cmd Shift A   |  Ctrl Shift A       <Find ACTION >
 . Cmd Shift F   |  Ctrl Shift F       <Find in FILES>
@@ -77,18 +75,17 @@ a leitura ficar agradável.
 
 ### Templates
 
-. Cmd Opt V     |  Ctrl Alt V      <Introduce VARIABLE>
-. Cmd Opt F     |  Ctrl Alt F      <Introduce FIELD>
-. Cmd Opt C     |  Ctrl Alt C      <Introduce CONSTANT>
-. Cmd Opt T     |  Ctrl Alt T      <Surround With>
-. Cmd P, F1     |  Ctrl J          <Live Templates - VIEW PARAMETERS> 
+. Cmd Opt V     |  Ctrl Alt V        <Introduce VARIABLE>
+. Cmd Opt F     |  Ctrl Alt F        <Introduce FIELD>
+. Cmd Opt C     |  Ctrl Alt C        <Introduce CONSTANT>
+. Cmd Opt T     |  Ctrl Alt T        <Surround With>
 
 ### Debug
 
-. Ctrl Shift D  |  Alt Shift F9  <Run Debug>
-. F7            |                <Step Into>
-. F8            |                <Step Over>
-. Shift F8      |                <Step Out>
-. Opt F9        |  Alt F9        <Run to Cursor>
-. Opt F8        |  Alt F8        <Evaluete Expression>
+. Ctrl Shift D  |  Alt Shift F9      <Run Debug>
+. F7            |                    <Step Into>
+. F8            |                    <Step Over>
+. Shift F8      |                    <Step Out>
+. Opt F9        |  Alt F9            <Run to Cursor>
+. Opt F8        |  Alt F8            <Evaluete Expression>
 ```
