@@ -7,7 +7,8 @@
 
 Obs: Os atalhos para Windows e Linux tendem a ser os mesmos nas suas configura-
 ções padrões. Então defini: Lado esquerdo do "|" será MacOs e direito, por sua 
-vez, Windows e Linux. Temos, ainda a ação do comando descrita conforme descrito  no KEYMAP IntelliJ. Nas combinações de teclas abaixo, omiti o sinal de "+" para
+vez, Windows e Linux. Temos, ainda a ação do comando descrita conforme descrito  
+no KEYMAP IntelliJ.Nas combinações de teclas abaixo, omiti o sinal de "+" para
 a leitura ficar agradável. 
 
 ### General
