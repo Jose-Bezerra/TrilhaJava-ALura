@@ -52,4 +52,8 @@ public class Aluno {
     public int hashCode() {
         return Objects.hash(getNome(), getMatricula());
     }
+
+    public int getNumeroMatricula() {
+        return this.matricula;
+    }
 }

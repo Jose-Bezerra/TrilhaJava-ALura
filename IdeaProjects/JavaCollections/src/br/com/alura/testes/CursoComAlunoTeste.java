@@ -3,7 +3,10 @@ package br.com.alura.testes;
 import br.com.alura.modelos.Aluno;
 import br.com.alura.modelos.Aula;
 import br.com.alura.modelos.Curso;
-import com.sun.security.jgss.GSSUtil;
+
+import java.util.Iterator;
+import java.util.Set;
+
 
 public class CursoComAlunoTeste {
     public static void main(String[] args) {
@@ -14,8 +17,8 @@ public class CursoComAlunoTeste {
         javaColecoes.adiciona(new Aula("Modelando com coleções", 24));
 
         Aluno a1 = new Aluno("Rodrigo Turini", 34672);
-        Aluno a2 = new Aluno("Rodrigo Turini", 34672);
-        Aluno a3 = new Aluno("Rodrigo Turini", 34672);
+        Aluno a2 = new Aluno("Guilherme Silveira", 34672);
+        Aluno a3 = new Aluno("Maurício Aniche", 34672);
         Aluno a4 = new Aluno("Rodrigo Turini", 34672);
 
 
@@ -27,6 +30,13 @@ public class CursoComAlunoTeste {
 
         System.out.println("Todos os alunos matriculados: ");
         javaColecoes.getAlunos().forEach(System.out::println);
+        System.out.println("-----------");
+
+        Set<Aluno> alunos = javaColecoes.getAlunos();
+        Iterator<Aluno> iterador = alunos.iterator(); //Forma antiga de iterar
+        while (iterador.hasNext()) {
+            System.out.println(iterador.next());
+        }
 
         System.out.println("O aluno " + a1.getNome() + " está matriculado?");
         System.out.println(javaColecoes.estaMAtriculado(a1));
