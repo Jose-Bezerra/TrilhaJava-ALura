@@ -1,3 +1,6 @@
+# Intellij
+
+```markdown
 
 ### MacOS / Windows / Linux
 
@@ -6,7 +9,6 @@ Obs: Os atalhos para Windows e Linux tendem a ser os mesmos nas suas configura-
 vez, Windows e Linux. Temos, ainda a ação do comando descrita conforme o  KEYMAP
 IntelliJ. Nas combinações de teclas abaixo, omiti o sinal de "+" para
 a leitura ficar agradável. 
-
 
 ### General
 
@@ -90,3 +92,4 @@ a leitura ficar agradável.
 . Shift F8      |  Shift F8          <Step Out>
 . Opt F9        |  Alt F9            <Run to Cursor>
 . Opt F8        |  Alt F8            <Evaluete Expression>
+```
